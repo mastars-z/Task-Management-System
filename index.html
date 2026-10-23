@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management System</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <header>
+       <h1>Task Management System</h1> 
+       <button id="theme-toggle" area-label = "Switch to dark mode">☾</button>
+    </header>
+    <main>
+        <section id="add-tasks">
+            <label for="task" class="task-label">
+                Task title  <input type="text" id="task" placeholder="Task title here">
+            </label>
+            <select name="priority" id="priority">
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+            <select id="category">
+                <option value="Personal">Personal</option>
+                <option value="Study">Study</option>
+                <option value="Work">Work</option>
+                <option value="Other">Other</option>
+            </select>
+            <input type="date" id="due-date">
+            <button type="button" id="add-task-btn">+ Add Task</button>
+        </section>
+        <div id="task-error"></div>
+        <section id="search-filter">
+            <input type="search" id="search" placeholder="Search tasks...">
+            <button class="filter" type="button">All</button>
+            <button class="filter" type="button">Completed</button>
+            <button class="filter" type="button">Pending</button>
+            <select id="category-filter" class="filter">
+                <option value="All">All Categories</option>
+                <option value="Personal">Personal</option>
+                <option value="Study">Study</option>
+                <option value="Work">Work</option>
+                <option value="Other">Other</option>
+            </select>
+        </section>
+        <section id="statistics-list">
+            <div id="statistics"></div>
+            <div id="task-container"></div>
+        </section>
+    </main>
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
